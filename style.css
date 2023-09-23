@@ -1,0 +1,81 @@
+body {
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  /*Atalho background color image repeat position/size 
+background: url(assets/bg-mobile.jpg) no-repeat top center cover;
+*/
+}
+#container0 {
+  width: 260px;
+  margin: 56px auto 0px;
+  /*ubyn u k mete margin: auto pou tou deux men gn yn règ css ki pa aplike*/
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: #ffff;
+}
+
+#Profile img {
+  width: 112px;
+}
+#Profile {
+  text-align: center;
+}
+#Profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+/*links*/
+ul {
+  list-style: none;
+  flex-direction: column;
+  /*espaço entre comando gap*/
+  gap: 16px;
+  display: flex;
+}
+ul li a {
+  display: flex;
+  border: 1px solid red;
+  /*ou para alinhar texto podemos usar  align-content*/
+  justify-content: center;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+
+}
+/*pseudo_selector */
+ul li a:hover{
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid white;
+}
+#socials-links{
+  display: flex;
+  gap: 16px;
+
+  padding: 24px 0;
+  font-size: 24px;
+
+}
+
+
+
+
+
+
+
+
