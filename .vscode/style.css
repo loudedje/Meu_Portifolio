@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  
   /*Atalho background color image repeat position/size 
 background: url(assets/bg-mobile.jpg) no-repeat top center cover;
 */
@@ -11,28 +12,38 @@ background: url(assets/bg-mobile.jpg) no-repeat top center cover;
   width: 260px;
   margin: 56px auto 0px;
   /*ubyn u k mete margin: auto pou tou deux men gn yn règ css ki pa aplike*/
+
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --text-color:white;
+  --bg-url:url(./assets/bg-mobile.jpg)
+}
+.light{
+  --text-color:black;
+}
+body{
+  /*background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;*/
+  background-color: rgb(47, 46, 54);
 }
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffff;
+  color: var(--text-color);
 }
 
 #Profile img {
   width: 112px;
 }
+
 #Profile {
   text-align: center;
 }
+
 #Profile p {
-  font-weight: 500;
-  line-height: 24px;
+  font-weight: 400; /* Normal weight */
+  line-height: 1.5em; /* Exemplo de valor ajustado */
   margin-top: 8px;
 }
+
 /*links*/
 ul {
   list-style: none;
@@ -40,17 +51,17 @@ ul {
   /*espaço entre comando gap*/
   gap: 16px;
   display: flex;
+  padding: 8px 0;
 }
 ul li a {
   display: flex;
-  border: 1px solid red;
+  
   /*ou para alinhar texto podemos usar  align-content*/
   justify-content: center;
-  padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 24px;
+  background: rgba(230, 222, 222, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
-
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
@@ -60,17 +71,36 @@ ul li a {
 }
 /*pseudo_selector */
 ul li a:hover{
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid white;
+  background: rgba(239, 234, 234, 0.05);
+  color: rgb(247, 253, 251);
+  border: 1.5px solid var(--text-color);
 }
-#socials-links{
+#socials-links {
   display: flex;
-  gap: 16px;
-
-  padding: 24px 0;
+  justify-content: center;
   font-size: 24px;
+  /*gap: 0 20px;*/
+}
+#socials-links a{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 15px;
+  justify-content: center;
+  transition: background 0.2;
+  border-radius: 30%;
 
 }
+#socials-links a:hover{
+  background: rgba(255, 255, 255, 0.2);
+}
+footer{
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+
 
 
 
